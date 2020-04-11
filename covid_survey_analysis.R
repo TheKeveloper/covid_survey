@@ -10,6 +10,10 @@ ggplot(data=df, aes(x=reorder(location, -table(location)[location]))) +
   xlab("Location") + 
   ylab("Count") + 
   labs(title="TODO") 
+                   
+# Add Logo
+grid::grid.raster(logo, x = 0.01, y = 0.01, just = c('left', 'bottom'), 
+                  width = unit(1.5, 'cm'))
 
 sum(df$location == "On campus with exemption") / length(df$location)
 nrow(df)
@@ -33,4 +37,8 @@ ggplot(data=df_conc, aes(x=reorder(concentration, -table(concentration)[concentr
   xlab("Count") + 
   ylab("Concentration") + 
   labs(title="TODO") 
+                   
+# Add Logo
+grid::grid.raster(logo, x = 0.01, y = 0.01, just = c('left', 'bottom'), 
+                  width = unit(1.5, 'cm'))
 
